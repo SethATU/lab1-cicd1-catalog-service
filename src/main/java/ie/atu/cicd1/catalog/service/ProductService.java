@@ -1,10 +1,12 @@
 package ie.atu.cicd1.catalog.service;
 
 import ie.atu.cicd1.catalog.model.Product;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ProductService {
     private final List<Product> products = new ArrayList<>();
     private long nextId = 1;
