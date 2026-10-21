@@ -51,4 +51,8 @@ public class ProductService {
     public void delete(Long id) {
         pRepo.deleteById(id);
     }
+
+    public List<Product> getByCategoryName(String categoryName) {
+        return cRepo.findByCategoryName(categoryName);
+    }
 }

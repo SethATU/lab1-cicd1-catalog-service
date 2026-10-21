@@ -50,4 +50,9 @@ public class ProductController
         productService.delete(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/by-category")
+    public List<Product> getByCategoryName(@RequestParam("categoryName") String categoryName) {
+        return productService.getByCategoryName(categoryName);
+    }
 }
